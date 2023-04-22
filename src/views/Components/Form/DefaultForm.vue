@@ -1042,8 +1042,8 @@ const schema = reactive<FormSchema[]>([
         <Icon icon="ep:calendar" class="el-input__icon" />
       </template>
 
-      <template #field5-prepend> Http:// </template>
-      <template #field5-append> .com </template>
+      <template #field5-prepend> Http://</template>
+      <template #field5-append> .com</template>
 
       <template #field9-default="{ item }">
         <div class="value">{{ item.value }}</div>
@@ -1097,7 +1097,7 @@ const schema = reactive<FormSchema[]>([
   </ContentWrap>
 </template>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .cell {
   height: 30px;
   padding: 3px 0;
@@ -1124,7 +1124,7 @@ const schema = reactive<FormSchema[]>([
 
   .holiday {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 50%;
     width: 6px;
     height: 6px;

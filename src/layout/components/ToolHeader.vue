@@ -74,10 +74,12 @@ export default defineComponent({
 })
 </script>
 
-<style lang="less" scoped>
-@prefix-cls: ~'@{namespace}-tool-header';
+<style lang="scss" scoped>
+@import '@/styles/variables.module';
 
-.@{prefix-cls} {
+$prefix-cls: #{$namespace}-tool-header;
+
+.#{$prefix-cls} {
   transition: left var(--transition-time-02);
 }
 </style>

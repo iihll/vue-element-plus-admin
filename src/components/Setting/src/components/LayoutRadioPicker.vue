@@ -19,7 +19,7 @@ const layout = computed(() => appStore.getLayout)
         `${prefixCls}__classic`,
         'relative w-56px h-48px cursor-pointer bg-gray-300',
         {
-          'is-acitve': layout === 'classic'
+          'is-active': layout === 'classic'
         }
       ]"
       @click="appStore.setLayout('classic')"
@@ -29,7 +29,7 @@ const layout = computed(() => appStore.getLayout)
         `${prefixCls}__top-left`,
         'relative w-56px h-48px cursor-pointer bg-gray-300',
         {
-          'is-acitve': layout === 'topLeft'
+          'is-active': layout === 'topLeft'
         }
       ]"
       @click="appStore.setLayout('topLeft')"
@@ -39,7 +39,7 @@ const layout = computed(() => appStore.getLayout)
         `${prefixCls}__top`,
         'relative w-56px h-48px cursor-pointer bg-gray-300',
         {
-          'is-acitve': layout === 'top'
+          'is-active': layout === 'top'
         }
       ]"
       @click="appStore.setLayout('top')"
@@ -49,7 +49,7 @@ const layout = computed(() => appStore.getLayout)
         `${prefixCls}__cut-menu`,
         'relative w-56px h-48px cursor-pointer bg-gray-300',
         {
-          'is-acitve': layout === 'cutMenu'
+          'is-active': layout === 'cutMenu'
         }
       ]"
       @click="appStore.setLayout('cutMenu')"
@@ -59,10 +59,12 @@ const layout = computed(() => appStore.getLayout)
   </div>
 </template>
 
-<style lang="less" scoped>
-@prefix-cls: ~'@{namespace}-layout-radio-picker';
+<style lang="scss" scoped>
+@import '@/styles/variables.module';
 
-.@{prefix-cls} {
+$prefix-cls: #{$namespace}-layout-radio-picker;
+
+.#{$prefix-cls} {
   &__classic {
     border: 2px solid #e5e7eb;
     border-radius: 4px;
@@ -164,7 +166,7 @@ const layout = computed(() => appStore.getLayout)
     }
   }
 
-  .is-acitve {
+  .is-active {
     border-color: var(--el-color-primary);
   }
 }

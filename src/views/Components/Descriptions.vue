@@ -130,7 +130,7 @@ const formValidation = () => {
   </Form>
 </template>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .is-required--item {
   position: relative;
 

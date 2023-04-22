@@ -37,8 +37,10 @@ setDefaultTheme()
   </ConfigGlobal>
 </template>
 
-<style lang="less">
-@prefix-cls: ~'@{namespace}-app';
+<style lang="scss">
+@import '@/styles/variables.module';
+
+$prefix-cls: #{$namespace}-app;
 
 .size {
   width: 100%;
@@ -50,14 +52,15 @@ body {
   padding: 0 !important;
   margin: 0;
   overflow: hidden;
-  .size;
+
+  @extend .size;
 
   #app {
-    .size;
+    @extend .size;
   }
 }
 
-.@{prefix-cls}-grey-mode {
+.#{$prefix-cls}-grey-mode {
   filter: grayscale(100%);
 }
 </style>

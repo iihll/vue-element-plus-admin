@@ -87,10 +87,12 @@ const toLogin = () => {
   </div>
 </template>
 
-<style lang="less" scoped>
-@prefix-cls: ~'@{namespace}-login';
+<style lang="scss" scoped>
+@import '@/styles/variables.module';
 
-.@{prefix-cls} {
+$prefix-cls: #{$namespace}-login;
+
+.#{$prefix-cls} {
   &__left {
     &::before {
       position: absolute;

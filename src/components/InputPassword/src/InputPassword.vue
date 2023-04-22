@@ -76,11 +76,13 @@ const getIconName = computed(() =>
   </div>
 </template>
 
-<style lang="less" scoped>
-@prefix-cls: ~'@{namespace}-input-password';
+<style lang="scss" scoped>
+@import '@/styles/variables.module';
 
-.@{prefix-cls} {
-  :deep(.@{elNamespace}-input__clear) {
+$prefix-cls: #{$namespace}-input-password;
+
+.#{$prefix-cls} {
+  :deep(.#{$elNamespace}-input__clear) {
     margin-left: 5px;
   }
 

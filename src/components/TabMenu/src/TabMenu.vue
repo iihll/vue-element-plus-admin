@@ -213,10 +213,12 @@ export default defineComponent({
 })
 </script>
 
-<style lang="less" scoped>
-@prefix-cls: ~'@{namespace}-tab-menu';
+<style lang="scss" scoped>
+@import '@/styles/variables.module';
 
-.@{prefix-cls} {
+$prefix-cls: #{$namespace}-tab-menu;
+
+.#{$prefix-cls} {
   transition: all var(--transition-time-02);
 
   &:after {

@@ -66,12 +66,14 @@ export default defineComponent({
 })
 </script>
 
-<style lang="less" scoped>
-@prefix-cls: ~'@{namespace}-layout';
+<style lang="scss" scoped>
+@import '@/styles/variables.module';
 
-.@{prefix-cls} {
+$prefix-cls: #{$namespace}-layout;
+
+.#{$prefix-cls} {
   background-color: var(--app-content-bg-color);
-  :deep(.@{elNamespace}-scrollbar__view) {
+  :deep(.#{$elNamespace}-scrollbar__view) {
     height: 100% !important;
   }
 }
