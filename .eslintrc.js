@@ -19,11 +19,12 @@ module.exports = defineConfig({
   },
   extends: [
     'plugin:vue/vue3-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'plugin:prettier/recommended'
+    'plugin:@typescript-eslint/recommended'
   ],
   rules: {
+    semi: ['warn', 'never'],
+    quotes: ['warn', 'single'],
+    "jsx-quotes": ['warn', 'prefer-double'],
     'vue/script-setup-uses-vars': 'error',
     'vue/no-reserved-component-names': 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
@@ -41,7 +42,6 @@ module.exports = defineConfig({
     '@typescript-eslint/no-unused-vars': 'off',
     'no-unused-vars': 'off',
     'space-before-function-paren': 'off',
-
     'vue/attributes-order': 'off',
     'vue/one-component-per-file': 'off',
     'vue/html-closing-bracket-newline': 'off',

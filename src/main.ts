@@ -15,6 +15,8 @@ import { setupGlobCom } from '@/components'
 
 // 引入element-plus
 import { setupElementPlus } from '@/plugins/elementPlus'
+// import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 
 // 引入全局样式
 import '@/styles/index.scss'
@@ -45,6 +47,7 @@ const setupAll = async () => {
   setupGlobCom(app)
 
   setupElementPlus(app)
+  // app.use(ElementPlus)
 
   setupRouter(app)
 

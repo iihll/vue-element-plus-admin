@@ -1,9 +1,9 @@
 module.exports = {
-  '*.{js,jsx,ts,tsx}': ['eslint --fix', 'prettier --write'],
-  '{!(package)*.json,*.code-snippets,.!(browserslist)*rc}': ['prettier --write--parser json'],
-  'package.json': ['prettier --write'],
-  '*.vue': ['prettier --write', 'stylelint --fix'],
-  '*.{scss,less,styl,css,html}': ['stylelint --fix', 'prettier --write'],
-  '*.md': ['prettier --write'],
-  '*.hbs': ['prettier --write']
+  '*.{js,jsx,ts,tsx}': ['eslint --fix'],
+  '{!(package)*.json,*.code-snippets,.!(browserslist)*rc}': ['eslint --fix'],
+  'package.json': ['eslint --fix'],
+  '*.vue': ['eslint --fix'],
+  '*.{scss,less,styl,css,html}': ['eslint --fix'],
+  '*.md': ['eslint --fix'],
+  '*.hbs': ['eslint --fix']
 }

@@ -91,13 +91,15 @@ const dialogStyle = computed(() => {
   </ElDialog>
 </template>
 
-<style lang="less">
-.@{elNamespace}-dialog__header {
+<style lang="scss">
+@import '@/styles/variables.module';
+
+.#{$elNamespace}-dialog__header {
   margin-right: 0 !important;
   border-bottom: 1px solid var(--tags-view-border-color);
 }
 
-.@{elNamespace}-dialog__footer {
+.#{$elNamespace}-dialog__footer {
   border-top: 1px solid var(--tags-view-border-color);
 }
 
@@ -108,11 +110,11 @@ const dialogStyle = computed(() => {
 }
 
 .dark {
-  .@{elNamespace}-dialog__header {
+  .#{$elNamespace}-dialog__header {
     border-bottom: 1px solid var(--el-border-color);
   }
 
-  .@{elNamespace}-dialog__footer {
+  .#{$elNamespace}-dialog__footer {
     border-top: 1px solid var(--el-border-color);
   }
 }
