@@ -13,10 +13,6 @@ import { useEmitt } from '@/hooks/web/useEmitt'
 import { CrudSchema, useCrudSchemas } from '@/hooks/web/useCrudSchemas'
 import { TableColumn } from '@/types/table'
 
-defineOptions({
-  name: 'ExamplePage'
-})
-
 const { push } = useRouter()
 
 const { register, tableObject, methods } = useTable<TableData>({

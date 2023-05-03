@@ -13,6 +13,7 @@ import LayoutRadioPicker from './components/LayoutRadioPicker.vue'
 import { useCache } from '@/hooks/web/useCache'
 import { useClipboard } from '@vueuse/core'
 import { useDesign } from '@/hooks/web/useDesign'
+import { ThemeTypes } from '@/types/theme'
 
 const { getPrefixCls } = useDesign()
 
@@ -65,7 +66,7 @@ const menuTheme = ref(appStore.getTheme.leftMenuBgColor || '')
 const setMenuTheme = (color: string) => {
   const primaryColor = useCssVar('--el-color-primary', document.documentElement)
   const isDarkColor = colorIsDark(color)
-  const theme: Recordable = {
+  const theme: ThemeTypes = {
     // 左侧菜单边框颜色
     leftMenuBorderColor: isDarkColor ? 'inherit' : '#eee',
     // 左侧菜单背景颜色
