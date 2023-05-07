@@ -61,15 +61,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       }),
       PurgeIcons(),
       viteMockServe({
-        ignore: /^\_/,
-        mockPath: 'mock',
-        localEnabled: !isBuild,
-        prodEnabled: isBuild,
-        injectCode: `
-          import { setupProdMockServer } from '../mock/_createProductionServer'
-
-          setupProdMockServer()
-          `
+        ignore: /^\_/
       }),
       ViteEjsPlugin({
         title: env.VITE_APP_TITLE
